@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>JSC029.html - Exemplo de JavaScript - TNEG</title>
+        <!--Mudança de cores: por text e um botão de comando em JavaScript-->
+    </head>
+        
+<body>
+<form name=form1><h1 align=center>Cores</h1>
+<table border=1 align=center>
+<tr><td>Cor</td><td><input type=text name=txtcor></td></tr>
+<tr><td colspan=2 align=center><input type=button value=trocar onClick="Cor()"></td></tr>
+</table>
+</form>
+
+<Script Language="JavaScript">
+
+function Cor(){
+fundo=document.form1.txtcor.value
+document.bgColor=fundo
+}
+
+</Script>
+</body>
+</html>

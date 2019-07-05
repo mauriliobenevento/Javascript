@@ -1,0 +1,37 @@
+
+<html>
+
+
+        <head>
+                <title>JSC013.html - Exemplo de JavaScript - TNEG</title>
+                <!--Le dois txtos e os concatena com JavaScript-->
+        </head>
+
+        <body>
+        
+        <form name="meuformulario">
+        Entre com o primeiro Nome.....: <input type="text" name="campo1">
+        Entre com o sobrenome.........: <input type="text" name="campo2"><br>
+        <input type="button" value="Concatenar" onClick="mostranome()">
+        </form>
+        
+        
+        <script language=JavaScript>
+        
+        /* nome completo */
+        
+        var nome;
+        var sobrenome;
+        var nomecompleto;
+        
+        function mostranome() {
+         nome = document.meuformulario.campo1.value;
+         sobrenome = document.meuformulario.campo2.value;
+         nomecompleto = nome+' '+sobrenome;
+         alert('oi ' + nomecompleto);
+        }
+        
+        
+        </Script>
+        </body>
+        <html

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>JSC042.html - Exemplo de JavaScript - TNEG</title>
+        <!--Permite aumentar ou diminuir o zoom de uma imagem em JavaScript-->
+    </head>
+<body><h1 align=center>Clique nos botões para definir o Zoom</h1>
+<div id=largura style="position:absolute;top:50%;left:20%">Largura 200 </div> </td><td><div id=altura style="position:absolute;top:50%;left:70%">altura 200 </div> </td></tr>
+</table>
+<table border=1 align=center>
+<tr><td><img src=img1.jpg name=foto width=200 height=200>
+</td></tr></table>
+<form name=form1>
+<center><input type=button value="Mais Zoom" onClick="Aumenta()"><input type=button value="Menos Zoom" onClick="Diminui()"></center>
+</form>
+
+<Script Language="JavaScript">
+
+function Aumenta(){
+document.images["foto"].width=document.images["foto"].width + 5
+document.images["foto"].height=document.images["foto"].height + 5
+largura.innerHTML="Largura " + document.images["foto"].width
+altura.innerHTML="Largura " + document.images["foto"].height
+}
+function Diminui(){
+document.images["foto"].width=document.images["foto"].width - 5
+document.images["foto"].height=document.images["foto"].height - 5
+largura.innerHTML="Largura " + document.images["foto"].width
+altura.innerHTML="Largura " + document.images["foto"].height
+}
+
+</script>
+</bory>
+</html>

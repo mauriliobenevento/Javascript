@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>JSC039.html - Exemplo de JavaScript - TNEG</title>
+        <!--Mudanco a cor de fundo automaticamente em JavaScript-->
+    </head>
+
+<body onLoad="Cores()">
+
+<Script Language="JavaScript">
+
+function Cores(){
+
+horario=new Date()
+segundo=horario.getSeconds()
+
+if(segundo>=0 && segundo<5){document.bgColor="yellow"}
+if(segundo>=6 && segundo<10){document.bgColor="red"}
+if(segundo>=11 && segundo<15){document.bgColor="blue"}
+if(segundo>=16 && segundo<20){document.bgColor="orange"}
+if(segundo>=21 && segundo<25){document.bgColor="green"}
+if(segundo>=26 && segundo<30){document.bgColor="gray"}
+}
+
+window.setInterval("Cores()",1000)
+
+</script>
+
+</body>
+</html>

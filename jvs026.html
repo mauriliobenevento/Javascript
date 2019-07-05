@@ -1,0 +1,30 @@
+<html>
+                <head>
+                    <title>JSC026.html - Exemplo de JavaScript - TNEG</title>
+                    <!--Mudança de cores: por seleção em JavaScript-->
+                </head>
+        
+<body>
+<form name=form1><h1 align=center>Selecione a Cor de fundo</h1>
+<table border=1 align=center>
+<tr><td align=center><select size=1 name=slcores onChange="Cor()">
+	<option value="blue">Azul</option>
+	<option value="red">Vermelho</option>
+	<option value="yellow">Amarelo</option>
+	<option value="green">Verde</option>
+	<option value="orange">Laranja</option>
+	</select>
+	</td></tr>
+</table>
+</form>
+
+<Script Language="JavaScript">
+
+function Cor(){
+fundo=document.form1.slcores.value
+document.bgColor=fundo
+}
+
+</script>
+</body>
+</html>

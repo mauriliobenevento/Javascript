@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>JSC036.html - Exemplo de JavaScript - TNEG</title>
+        <!--Pegando a hora do SO e mostra as mudanças em tempo real no browser em JavaScript-->
+    </head>
+
+
+<body onLoad="Tempo()">
+<form name=form1>
+<table border=1 align=center>
+<tr><td>A hora exata é :</td><td><input type=text name=txthora size=6></td></tr>
+</table>
+</form>
+
+<Script Language="JavaScript">
+
+function Tempo(){
+
+horario=new Date()
+hora=horario.getHours()
+minuto=horario.getMinutes()
+segundo=horario.getSeconds()
+
+if(hora<10){hora="0" + hora}
+if(minuto<10){minuto="0" + minuto}
+if(segundo<10){segundo="0" + segundo}
+
+if(segundo>=0 && segundo<=10){document.bgcolor="yellow"}
+if(segundo>=11 && segundo<=20){document.bgcolor="red"}
+if(segundo>=21 && segundo<=30){document.bgcolor="blue"}
+if(segundo>=31 && segundo<=40){document.bgcolor="orange"}
+if(segundo>=41 && segundo<=50){document.bgcolor="green"}
+if(segundo>=51 && segundo<=60){document.bgcolor="gray"}
+
+document.form1.txthora.value=hora + ":" + minuto + ":" + segundo
+}
+
+window.setInterval("Tempo()",1000)
+
+</script>
+</body>
+</html>

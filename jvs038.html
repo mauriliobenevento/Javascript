@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>JSC038.html - Exemplo de JavaScript - TNEG</title>
+        <!--Outra forma de programar para colocar a hora no rodapé, canto inferior direito do browser em JavaScript-->
+    </head>
+
+<div  style="position:absolute;font-size:10pt;top:90%;left:90%" id=lugar> Tempo </div>
+<body onLoad="Tempo()">
+
+<Script Language="JavaScript">
+
+function Tempo(){
+horario=new Date()
+hora=horario.getHours()
+minuto=horario.getMinutes()
+segundo=horario.getSeconds()
+
+if(hora<10){hora="0" + hora}
+if(minuto<10){minuto="0" + minuto}
+if(segundo<10){segundo="0" + segundo}
+lugar.innerHTML=hora+":"+minuto+":"+segundo
+document.title=hora+":"+minuto+":"+segundo
+window.status=hora+":"+minuto+":"+segundo
+}
+window.setInterval("Tempo()",1000)
+
+</script>
+
+</body>
+</html>

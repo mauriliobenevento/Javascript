@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>JSC041.html - Exemplo de JavaScript - TNEG</title>
+        <!--Coloca quadros com imagens e permite alterar com o mouse em JavaScript-->
+    </head>
+
+<body><h1 align=center>Passe o mouse sobre as imagens</h1>
+<table border=1 align=center>
+<tr><td colspan=3 align=center><img src=img1.jpg name=foto width=300 height=250></td></tr>
+<tr><td><img src=img2.jpg width=100 height=100 onMouseOver="Trocafoto2()" onMouseOut="Voltafoto1()"></td>
+<td><img src=img3.jpg width=100 height=100 onMouseOver="Trocafoto3()" onMouseOut="Voltafoto1()"> </td>
+<td><img src=img4.jpg width=100 height=100 onMouseOver="Trocafoto4()" onMouseOut="Voltafoto1()"></td></tr>
+</table>
+
+<Script Language="JavaScript">
+
+//essa imagem faz a troca para flores2
+function Trocafoto2(){
+document.images["foto"].src="img2.jpg"
+}
+function Trocafoto3(){
+document.images["foto"].src="img3.jpg"
+}
+function Trocafoto4(){
+document.images["foto"].src="img4.jpg"
+}
+//essa função retorna a imagem inicial
+function Voltafoto1(){
+document.images["foto"].src="img1.jpg"
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JSC035.html - Exemplo de JavaScript - TNEG</title>
+        <!--Concatenando a data completa em JavaScript-->
+    </head>
+
+<body>
+
+<Script Language="JavaScript">
+
+data=new Date()
+
+semana=data.getDay()
+dia=data.getDate()
+mes=data.getMonth()+1
+ano=data.getFullYear()
+diadasemana=new Array()
+diadasemana[0]="Domingo"
+diadasemana[1]="Segunda feira"
+diadasemana[2]="Terça feira"
+diadasemana[3]="Quarta feira"
+diadasemana[4]="Quinta feira"
+diadasemana[5]="Sexta feira"
+diadasemana[6]="Sábado"
+
+meses=new Array()
+meses[1]="Janeiro"
+meses[2]="Fevereiro"
+meses[3]="Março"
+meses[4]="Abril"
+meses[5]="Maio"
+meses[6]="Junho"
+meses[7]="Julho"
+meses[8]="Agosto"
+meses[9]="Setembro"
+meses[10]="Outubro"
+meses[11]="Novembro"
+meses[12]="Dezembro"
+document.write(diadasemana[semana]+", " + dia + " de " + meses[mes] + " de " + ano)
+
+</script>
+</body>
+</html>

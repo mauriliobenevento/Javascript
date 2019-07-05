@@ -1,0 +1,263 @@
+<html>
+
+        <head>
+                <title>JSC009.html - Exemplo de JavaScript - TNEG</title>
+                <!--Entrada de dados e validacoes gerais nos dados digitados com JavaScript-->
+        </head>
+
+
+<body bgcolor=white>
+<center><b><u><font color=black size=5> Formulário de Venda</u></font> </b></center>
+<center>
+<form action="resultado.asp" method="post" name="form1">
+	<table whidth="200" border="0" cellspacing="5" cellpadding="0">
+	<tr>
+	<td align="left"><font color="black">Nome:</font></td>
+	<td><input type=text name=txtnome size=60></td>
+	</tr> <tr>
+	<td align=right"><font color="black"> Endereço:</font> </td>
+	<td> <input type=text name=endereço size="40" maxlength="50"> </td>
+	</tr> <tr>
+	<td align=right"><font color="black"> Cep:</font> </td>
+	<td> <input type=text name=cep size="5">-<input name="cep1" type="text" size="3"></td>
+	</tr> <tr>
+	<td align=right"><font color="black"> Telefone:</font> </td>
+	<td> <input type=text name=telefone size="2"><input name="telefone1" type="text" size="8"></td>
+	</tr> <tr>
+	<td align="left"><font color="black"> Celular:</font> </td>
+	<td> <input type=text name=celular size="2"><input name="celular1" type="text" size="8"></td>
+	</tr> <tr>
+	<td align="left"><font color="black">Produto 1</font></td>
+	<td> <input type=text name=produto1 size="20" maxlength="30"></td>
+	<td align="left"><font color="black">Código:</font></td>
+	<td> <input type=text name=codigo1 size="3"></td>
+	<td align="left"><font color="black">Preço</font></td>
+	<td> <input type=text name=preço1 size="8"maxlength="20"></td>
+	</tr> <tr>
+	<td align="left"><font color="black">Produto 2</font></td>
+	<td> <input type=text name=produto2 size="20" maxlength="30"></td>
+	<td align="left"><font color="black">Código:</font></td>
+	<td> <input type=text name=codigo2 size="3"></td>
+	<td align="left"><font color="black">Preço</font></td>
+	<td> <input type=text name=preço2 size="8"maxlength="20"></td>
+	</tr> <tr>
+	<td align="left"><font color="black">Produto 3</font></td>
+	<td> <input type=text name=produto3 size="20" maxlength="30"></td>
+	<td align="left"><font color="black">Código:</font></td>
+	<td> <input type=text name=codigo3 size="3"></td>
+	<td align="left"><font color="black">Preço</font></td>
+	<td> <input type=text name=preço3 size="8"maxlength="20"></td>
+	</tr> <tr>
+	<td colspan=4></td>
+	<td align="left" height=50><font color="black">Total</font></td>
+	<td> <input type=text name=total size="8" maxlength="20"></td>
+	</tr> <tr>
+	<td align="left"><font color="black">Vendedor</font></td>
+	<td height=100>
+	<select name="vendedor">
+	<option value=""> -- selecione -- </option>
+	<option value="SP"> João </option>
+	<option value="RJ"> Paulo </option>
+	<option value="BH"> Alessandro </option>
+	<option value="ES"> Henrique </option>
+	</select>
+	</td>
+	<td align="right" height=100><font color="black"> Data:</font></td>
+	<td>
+	<input type=text name=dia size="2" maxlength="2"><font color="black">/</font></td>
+	<td><input type=text name=mes size="2" maxlength="2"><font color="black">/</font></td>
+        <td><input type=text name=ano size="4" maxlength="4">
+	</td>
+	</tr> <tr>
+	<td></td>	
+<td><center><input type=button value=Enviar onclick="Enviar()"> </center> </td>
+	</tr>
+	</table>
+</form>
+</center>
+
+<Script Language="JavaScript">
+
+function Enviar(){
+nome=document.form1.txtnome.value
+endereço=document.form1.endereço.value
+cep=document.form1.cep.value
+cep1=document.form1.cep1.value
+telefone=document.form1.telefone.value
+telefone1=document.form1.telefone1.value
+celular=document.form1.celular.value
+celular1=document.form1.celular1.value
+produto1=document.form1.produto1.value
+codigo1=document.form1.codigo1.value
+preço1=document.form1.preço1.value
+produto2=document.form1.produto2.value
+codigo2=document.form1.codigo2.value
+preço2=document.form1.preço2.value
+produto3=document.form1.produto3.value
+codigo3=document.form1.codigo3.value
+preço3=document.form1.preço3.value
+total=document.form1.total.value
+vendedor=document.form1.vendedor.value
+dia=document.form1.dia.value
+mes=document.form1.mes.value
+ano=document.form1.ano.value
+
+if(nome ==""){alert("Digite seu nome")
+return false
+}
+if(isNaN(nome)==false){alert("Campo inválido")
+return false
+}
+
+if(endereço ==""){alert("Digite seu endereço")
+return false
+}
+if(isNaN(endereço)== false){alert("Campo inválido")
+return false
+}
+
+if(cep ==""){alert("Digite seu cep")
+return false
+}
+if(isNaN(cep)== true){alert("Campo inválido")
+return false
+}
+
+if(cep1 ==""){alert("Digite o complemento do  cep")
+return false
+}
+if(isNaN(cep1)== true){alert("Campo inválido")
+return false
+}
+
+if(telefone ==""){alert("Digite o código da localidade do telefone")
+return false
+}
+if(isNaN(telefone)== true){alert("Campo inválido")
+return false
+}
+
+if(telefone1 ==""){alert("Digite o numero do telefone")
+return false
+}
+if(isNaN(telefone1)== true){alert("Campo inválido")
+return false
+}
+
+if(celular ==""){alert("Digite o código da localidade do celular")
+return false
+}
+if(isNaN(celular)== true){alert("Campo inválido")
+return false
+}
+
+if(celular1 ==""){alert("Digite o numero do celular")
+return false
+}
+if(isNaN(celular1)== true){alert("Campo inválido")
+return false
+}
+
+if(produto1 ==""){alert("Digite o nome do produto")
+return false
+}
+if(isNaN(produto1)== false){alert("Campo inválido")
+return false
+}
+
+if(codigo1 ==""){alert("Digite o código do produto")
+return false
+}
+if(isNaN(codigo1)== true){alert("Campo inválido")
+return false
+}
+
+if(preço1 ==""){alert("Digite o preço do produto")
+return false
+}
+if(isNaN(preço1)== true){alert("Campo inválido")
+return false
+}
+
+if(produto2 ==""){alert("Digite o nome do produto")
+return false
+}
+if(isNaN(produto2)== false){alert("Campo inválido")
+return false
+}
+
+if(codigo2 ==""){alert("Digite o código do produto")
+return false
+}
+if(isNaN(codigo2)==true){alert("Campo inválido")
+return false
+}
+
+if(preço2 ==""){alert("Digite o preço do produto")
+return false
+}
+if(isNaN(preço2)== true){alert("Campo inválido")
+return false
+}
+
+if(produto3 ==""){alert("Digite o nome do produto")
+return false
+}
+if(isNaN(produto3)== false){alert("Campo inválido")
+return false
+}
+
+if(codigo3 ==""){alert("Digite o código do produto")
+return false
+}
+if(isNaN(codigo3)== true){alert("Campo inválido")
+return false
+}
+
+if(preço3 ==""){alert("Digite o preço do produto")
+return false
+}
+if(isNaN(preço3)== true){alert("Campo inválido")
+return false
+}
+
+if(total ==""){alert("O total do produto é?")
+return false
+}
+if(isNaN(total)== true){alert("Campo inválido")
+return false
+}
+
+if(vendedor ==""){alert("O vendedor é?")
+return false
+}
+if(isNaN(vendedor)== false){alert("Campo inválido")
+return false
+}
+
+if(dia<1||dia>31){alert("Dia inválido")
+return false
+}
+if(isNaN(dia)== true){alert("Campo inválido")
+return false
+}
+
+if(mes<1||mes>12){alert("Mês inválido")
+return false
+}
+if(isNaN(mes)== true){alert("Campo inválido")
+return false
+}
+
+if(ano<2005||ano>2010){alert("Ano inválido")
+return false
+}
+if(isNaN(ano)== true){alert("Campo inválido")
+return false
+}
+}
+
+</Script>
+
+</body>
+</html>

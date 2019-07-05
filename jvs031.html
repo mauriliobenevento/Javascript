@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>JSC031.html - Exemplo de JavaScript - TNEG</title>
+        <!--Recebe entrada e trata dentro de alertas com um botão de comando em JavaScript-->
+    </head>
+        
+<body>
+<form name=form1><h1 align=center>Qual é a sua profissão?</h1>
+<table border=1 align=center>
+<tr><td>Digite a sua profissão: Instrutor, Professor ou Designer</td>
+<td><input type=text name=txtprofissao></td><td><input type=button value=avaliar onClick="Prof()"></td></tr>
+</table>
+</form>
+
+<Script Language="JavaScript">
+
+function Prof(){
+profissao=document.form1.txtprofissao.value
+switch(profissao.toLowerCase()){
+	case"programador":{
+	alert("você está programando muito bem!")
+	break
+	}
+	case"professor":{
+	alert("Quem mandou não estudar agora é professor")
+	break
+	}
+	case"designer":{
+	alert("Você conhece vários programas e linguagens")
+	break	
+	}
+	default:{
+	alert("Digite:Professor, Programador ou Designer")
+	}
+	}	
+	}
+
+</Script>
+
+</body>
+</html>

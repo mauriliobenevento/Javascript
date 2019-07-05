@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>JSC040.html - Exemplo de JavaScript - TNEG</title>
+        <!--Seleciona um site e vai para ele em JavaScript-->
+    </head>
+<body>
+<form name=form1><h1 align=center>Selecione uma opção</h1>
+<table border=1 align=center>
+<tr><td><select size=1 name=slsites onchange="Sites()">
+	<option value="http://www.tneg.com.br">TNEG</option>
+	<option value="https://www.bradesco.com.br">Bradesco</option>
+	<option value="https://eaesp.fgv.br/">FGV EAESP</option>
+	<option value="https://datascience.columbia.edu">Instituto de Data Science</option>
+	</select></td></tr></table></form>
+
+<Script Language="JavaScript">
+
+function Sites(){
+Site=document.form1.slsites.value
+window.location.href=Site
+}
+
+</script>
+
+</bory>
+</html>
