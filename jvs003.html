@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>JSC003.html - Exemplo de JavaScript - Faculdades Torricelli</title>
+<!—Validando entrada de dados com JavaScript -->
+</head>
+<body>
+<form name=form1>
+<h1 align=center>Digite seu nome</h1>
+<center><input type=text name=txtnome size=60></center>
+<center><input type=button value=enviar onclick="Nome()"></center>
+</form>
+
+<Script Language=JavaScript>
+<!--
+	function Nome(){
+		nome=document.form1.txtnome.value
+		// verifica se o nome está em branco
+	
+		if(nome=="")
+			{alert("Não pode ser vazio")
+			return false
+		}
+
+		//verifica se o valor digitado é um número
+		if(isNaN(nome)==false)
+			{alert("Não pode ter números")
+			return false
+			}
+
+		//verifica se o valor digitado é um texto
+		if(isNaN(nome)==true)
+		{alert("Seu nome é "+ nome )
+			return false
+		}
+}
+//-->
+</Script>
+
+</body>
+<html>

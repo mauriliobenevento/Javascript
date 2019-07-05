@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>JSC008.html - Exemplo de JavaScript - Faculdades Torricelli</title>
+<!— Validando todos os campos do formulário e enviando com JavaScript -->
+</head>
+<body bgcolor="white">
+<form action="mailto://maurilio@mbtwo.com.br" method="post" name="venda" onSubmit="return
+Nome(this)">
+<h2><center><font face="verdana" color="blue">Formulário de Venda</font>
+</center>
+</h2>
+<table width="350" border="0" cellspacing="5" cellpading="0">
+<tr>
+<td align="left"> Nome:</td>
+<td><input name="nome" type="text" size="30" maxlength="50"> </td></tr>
+<tr><td align="left"> Endereço:</td>
+<td><input name="endereco" type="text" size="50" maxlength="80"></td></tr>
+<tr><td align="left"> CEP:</td>
+<td><input name="cep" type="text" size="9"</td></tr>
+<tr><td align="left"> Telefone:</td>
+<td><input name="telefone" type="text" size="8"</td></tr>
+<tr><td align="left"> Celular:</td>
+<td><input name="celular" type="text" size="8"</td></tr>
+<table>
+<tr>
+<tr><th align="left"> Venda:</th></tr>
+<tr>
+<td> Produto A:&nbsp;<input name="produtoA" type="text" size="30"></td>
+<td> Código:&nbsp;<input type="text" size="10"></td>
+<td> &nbsp;&nbsp;&nbsp;&nbsp;Preço:&nbsp;<input type="text" size="10"></td>
+</tr>
+<td> Produto B:&nbsp;<input name="produtoB" type="text" size="30"></td>
+<td> Código:&nbsp;<input type="text" size="10"></td>
+<td> &nbsp;&nbsp;&nbsp;&nbsp;Preço:&nbsp;<input type="text" size="10"></td>
+</tr>
+<td> Produto C:&nbsp;<input name="produtoC" type="text" size="30"></td>
+<td> Código:&nbsp;<input type="text" size="10"></td>
+<td> &nbsp;&nbsp;&nbsp;&nbsp;Preço:&nbsp;<input type="text" size="10"></td>
+</tr>
+</td>
+<tr><td></tD><td></td><td><b>&nbsp;&nbsp;&nbsp;&nbsp;Total:&nbsp;</b><input type="text"
+size="10"></td>
+</tr><tr></tr><tr></tr>
+<tr>
+<th align="left"> Vendedor:&nbsp;<input name="vendedor" type="text" size="30" maxlength="50"></th>
+<td></td>
+<th>&nbsp; &nbsp; Data:&nbsp;<input type="text" size="2">/<input type="text" size="2">/<input
+type="text" size="2">
+</th>
+</tr>
+<tr></tr><tr></tr><tr>
+<td></td><td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type=submit value = "Enviar"> </td>
+</table>
+</tr>
+88
+</table>
+</form>
+</body>
+<Script Language="JavaScript">
+<!--
+function Nome()
+{
+nome=document.venda.nome.value
+endereco=document.venda.endereco.value
+cep=document.venda.cep.value
+telefone=document.venda.telefone.value
+celular=document.venda.celular.value
+produtoA=document.venda.produtoA.value
+produtoB=document.venda.produtoB.value
+produtoC=document.venda.produtoC.value
+vendedor=document.venda.vendedor.value
+if(nome =="" || isNaN(nome)==false)
+{
+alert("Digite seu Nome")
+return false
+}
+else if( endereco == "" || isNaN(endereco)==false)
+{
+alert("Digite seu Endereço")
+return false
+}
+else if(cep == "")
+{
+alert("Digite seu cep")
+return false
+}
+else if(isNaN(cep)==true)
+{
+alert("Digite somente números!!!")
+return false
+}
+else if(telefone == "")
+{
+alert("Digite seu telefone")
+return false
+}
+else if(isNaN(telefone) == true)
+{
+alert("Ao digitar seu telefone entre apenas com números!!!")
+return false
+}
+else if(celular == "")
+{
+alert("Digite seu celular")
+return false
+}
+else if(isNaN(celular) == true)
+{
+alert("Ao digitar seu celular entre apenas com números!!!")
+89
+return false
+}
+else
+{
+alert("Seus dados: " + "\n" +"Nome: "+ nome + "\n" +"Endereço: " +endereco + "\n"
++"CEP: "+ cep + "\n" +"Telefone: "+ telefone + "\n" +"Celular: "
++ celular+ "\n" + "Produto A: "+ produtoA + "\n" + "Produto B: " +
+produtoB + "\n" + "Produto C: " + produtoC + "\n" + "Vendedor: " + vendedor)
+}
+}
+//-->
+</Script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>JSC004.html - Exemplo de JavaScript - Faculdades Torricelli</title>
+<!—Seleção de radio com JavaScript -->
+</head>
+<body>
+<h1 align=center>Qual sistema operacional você usa?</h1>
+<form name=form1>
+<input type=radio name=r1 onClick="msistema = 0" >Windows 95<br>
+<input type=radio name=r1 onClick="msistema = 1" >Windows 98<br>
+<input type=radio name=r1 onClick="msistema = 2" >Windows XP<br>
+<input type=button value="escolhi" onclick="Ver()">
+</form>
+<Script Language="JavaScript">
+<!--
+msistema = 1
+function Ver(){
+sistemas=new Array()
+sistemas[0]="Windows 95"
+sistemas[1]="Windows 98"
+sistemas[2]="Windows XP"
+alert("O sistema que você usa é " + sistemas[msistema])
+}
+//-->
+</Script>
+</body>
+<html>

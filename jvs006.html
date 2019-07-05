@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>JSC006.html - Exemplo de JavaScript - Faculdades Torricelli</title>
+<!— Validando o campo Nome do formulário com JavaScript -->
+</head>
+<body bgColor=white>
+<center><font face=arial size=5>Dados do Cliente </font></center>
+<form name=form1 action=dir/resultado.asp method=post>
+<table border=0>
+<tr>
+<td>Nome: </td>
+<td><input size=30 name=txtnome>
+<td>Endereço: </td>
+<td><input size=30 name=endereco>
+<tr>
+<td>CEP: </td>
+<td><input size=30 name=cep>
+<td>Telefone: </td>
+<td><input size=30 name=telefone>
+<tr>
+<td>Celular: </td>
+<td><input size=30 name=celular>
+<td>CPF </td>
+<td><input size=30 name=cpf>
+<tr>
+<td>RG: </td>
+<td><input size=30 name=rg>
+</tr>
+</Table><br> <center> <font face=arial size=5> Vendas </font></center>
+<table border=0>
+<tr>
+<td>produto:</td>
+<td><input size=8 name=produto>
+<td>código:</td>
+<td><input size=8 name=codigo>
+<td>preço:</td>
+<td><input size=8 name=preco>
+<tr>
+<td>produto:</td>
+<td><input size=8 name=produto>
+<td>código:</td>
+<td><input size=8 name=codigo>
+<td>preço:</td>
+<td><input size=8 name=preco>
+<tr>
+<td>produto:</td>
+<td><input size=8 name=produto>
+<td>código:</td>
+<td><input size=8 name=codigo>
+<td>preço:</td>
+<td><input size=8 name=preco>
+<tr>
+<td>produto:</td>
+<td><input size=8 name=produto>
+<td>código:</td>
+<td><input size=8 name=codigo>
+<td>preço:</td>
+<td><input size=8 name=preco>
+<tr>
+<td><b>Total:</b></td>
+<td><input size=8 name=preco> </tr></table>
+<center>
+<table border=0>
+<tr>
+<td>Vendedor:</td>
+<td><input size=8 name=vendedor>
+<td>Data:</td>
+<td><input size=3 name=dia>/<input size=3 name=mes>/
+<input size=3 name=ano> </tr></table></center><br><br>
+<center><input onclick=Nome() type=button value=Enviar name=botao></center>
+</form>
+<Script Language=JavaScript>
+<!--
+
+function Nome()
+{
+nome=document.form1.txtnome.value
+end=document.form1.endereco.value
+
+
+	if(nome=="")
+	{	
+		alert("Digite seu nome")
+		return false
+	}
+
+
+	if(end=="")
+	{	
+		alert("Endereço não pode ser vazio...")
+		return false
+	}
+
+
+	if(isNaN(nome)== false)
+	{
+		alert("Digite o nome")
+		return false
+	}
+
+	if(isNaN(nome)== true)
+	{
+		alert(nome + " ,sua venda foi enviada com sucesso")
+		return false
+	}
+}
+
+//-->
+</script>
+</body>
+</html>
